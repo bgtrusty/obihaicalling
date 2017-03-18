@@ -38,9 +38,6 @@ while not xbmc.abortRequested:
                 fullurl = 'http://localhost/jsonrpc?' + urllib.urlencode(values)
                 xbmc.executebuiltin("XBMC.Notification("+name+","+number+",7000,special://home/addons/script.obihailog/phone.png)")
                 print("[Obihai Calling] Call from "+name+".  Telephone number:"+number)
-                # r = urllib2.urlopen(fullurl)
-                # values = {'request': '{"jsonrpc":"2.0","method":"GUI.ShowNotification","params":{"title":"Call from '+name+'","message":"'+number+' calling extension","displaytime":15000,"image":"/home/username/phone.png"},"id":1}'}
-                # r = requests.get("http://localhost/jsonrpc", params=payload)
             else:
                 print("[Obihai Calling] Phone off hook")
 

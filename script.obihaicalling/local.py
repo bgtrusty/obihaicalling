@@ -24,13 +24,10 @@ while 1:
             number = data[2].strip(' \n\x00')
             values = {}
             values['request'] = '{"jsonrpc":"2.0","method":"GUI.ShowNotification","params":{"title":"Call from '+name+'","message":"'+number+'","displaytime":15000,"image":"/home/username/phone.png"},"id":1}'
-            fullurl = 'http://192.168.1.99/jsonrpc?' + urllib.urlencode(values)
+            fullurl = 'http://localhost/jsonrpc?' + urllib.urlencode(values)
             r = urllib2.urlopen(fullurl)
             r = urllib2.urlopen('http://localhost/jsonrpc?' + urllib.urlencode(values))
             print ('Call from ' + name + ' and ' + number)
-            # values = {'request': '{"jsonrpc":"2.0","method":"GUI.ShowNotification","params":{"title":"Call from '+name+'","message":"'+number+' calling extension","displaytime":15000,"image":"/home/username/phone.png"},"id":1}'}
-            # r = requests.get("http://localhost/jsonrpc", params=payload)
-
 
 s.close()
 sys.exit()
