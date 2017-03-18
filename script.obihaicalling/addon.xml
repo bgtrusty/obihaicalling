@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.obihaicalling"
+	name="ObiHai Calling"
+	version="0.1.2"
+	provider-name="MLT Projects">
+  <requires>
+    <import addon="xbmc.python" version="2.1.1"/>
+  </requires>
+  <!-- extension point="xbmc.python.script" library="default.py" / -->
+  <extension point="xbmc.service" library="default.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">An intergration with ObiHai</summary>
+    <description lang="en">A Script to show who's calling</description>
+  </extension>
+</addon>
